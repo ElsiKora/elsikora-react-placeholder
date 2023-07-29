@@ -1,4 +1,4 @@
-# Contributing to react-loading-placeolder
+# Contributing to react-loading-placeholder
 
 Contributions are welcome.
 
@@ -23,6 +23,6 @@ Contributions are welcome.
 
 ## Test Projects Repository
 
-There are some test projects that use `react-loading-placeolder` in the
-[react-loading-placeolder-test-projects](https://github.com/srmagura/react-loading-placeolder-test-projects)
+There are some test projects that use `react-loading-placeholder` in the
+[react-loading-placeholder-test-projects](https://github.com/srmagura/react-loading-placeholder-test-projects)
 repository.

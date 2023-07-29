@@ -93,7 +93,7 @@ export function Placeholder({
     ...styleOptionsToCssProperties(styleOptions),
   };
 
-  let className = 'react-loading-placeolder';
+  let className = 'react-loading-placeholder';
   if (customClassName) className += ` ${customClassName}`;
 
   const inline = styleOptions.inline ?? false;
@@ -107,10 +107,10 @@ export function Placeholder({
 
     if (countCeil > count && i === countCeil - 1) {
       // count is not an integer and we've reached the last iteration of
-      // the loop, so add a "fractional" placeolder.
+      // the loop, so add a "fractional" placeholder.
       //
       // For example, if count is 3.5, we've already added 3 full
-      // placeolders, so now we add one more placeolder that is 0.5 times the
+      // placeholders, so now we add one more placeholder that is 0.5 times the
       // original width.
 
       const width = thisStyle.width ?? '100%'; // 100% is the default since that's what's in the CSS
@@ -125,20 +125,20 @@ export function Placeholder({
       thisStyle = { ...thisStyle, width: fractionalWidth };
     }
 
-    const placeolderSpan = (
+    const placeholderSpan = (
       <span className={className} style={thisStyle} key={i}>
         &zwnj;
       </span>
     );
 
     if (inline) {
-      elements.push(placeolderSpan);
+      elements.push(placeholderSpan);
     } else {
-      // Without the <br />, the placeolder lines will all run together if
+      // Without the <br />, the placeholder lines will all run together if
       // `width` is specified
       elements.push(
         <React.Fragment key={i}>
-          {placeolderSpan}
+          {placeholderSpan}
           <br />
         </React.Fragment>
       );

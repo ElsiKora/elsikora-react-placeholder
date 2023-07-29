@@ -18,7 +18,7 @@
 
 ### Bug Fixes
 
-- The placeolder now has `user-select: none` so that it cannot be selected. (#179)
+- The placeholder now has `user-select: none` so that it cannot be selected. (#179)
 
 ### Thanks!
 
@@ -28,7 +28,7 @@
 
 ### Features
 
-- The placeolder animation no longer plays for users who have enabled the `prefers-reduced-motion` accessibility setting.
+- The placeholder animation no longer plays for users who have enabled the `prefers-reduced-motion` accessibility setting.
 
 ### Thanks!
 
@@ -48,7 +48,7 @@
 
 ### Features
 
-- If `count` is set to a decimal number like 3.5, the component will display 3 full-width placeolders followed by 1 half-width placeolder. (#136)
+- If `count` is set to a decimal number like 3.5, the component will display 3 full-width placeholders followed by 1 half-width placeholder. (#136)
 
 ## 3.0.3
 
@@ -72,7 +72,7 @@
 
 ### Bug Fixes
 
-- Fix circle placeolder animation being broken in Safari (#120)
+- Fix circle placeholder animation being broken in Safari (#120)
 - Fix `PlaceholderProps` not being exported from the main entry point (#118)
 - Fix `enableAnimation` prop having no effect. This was a regression.
 
@@ -83,7 +83,7 @@
 1. Add the new required CSS import:
 
    ```js
-   import 'react-loading-placeolder/dist/placeolder.css';
+   import 'react-loading-placeholder/dist/placeholder.css';
    ```
 
 2. Read the full list of breaking changes to see if any affect you.
@@ -101,7 +101,7 @@
 - Require React >= 16.8.0
 - Drop Internet Explorer support
 
-If you need to support Internet Explorer or use an old version of React, please continue to use `react-loading-placeolder` v2.
+If you need to support Internet Explorer or use an old version of React, please continue to use `react-loading-placeholder` v2.
 
 ### Features
 
@@ -111,7 +111,7 @@ If you need to support Internet Explorer or use an old version of React, please 
 - Add `enableAnimation` prop to allow disabling the animation
 - Add `containerClassName` prop to allow customizing the container element
 - Add `containerTestId` to make testing easier
-- Add `aria-live` and `aria-busy` attributes to the placeolder container to
+- Add `aria-live` and `aria-busy` attributes to the placeholder container to
   improve screen reader support
 
 ### Other Changes
@@ -126,7 +126,7 @@ If you need to support Internet Explorer or use an old version of React, please 
 ### Bug Fixes
 
 - Several common issues are now resolved as a result of removing Emotion
-- Fix multi-line placeolders not working with the `width` prop
+- Fix multi-line placeholders not working with the `width` prop
 - Fix the type of the `wrapper` prop in the type definitions
 
 ### Thanks!

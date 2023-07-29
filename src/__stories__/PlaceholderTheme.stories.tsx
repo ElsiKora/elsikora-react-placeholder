@@ -50,8 +50,8 @@ export const LightAndDarkThemes: React.FC = () => {
     setTheme((oldTheme) => (oldTheme === 'light' ? 'dark' : 'light'));
   };
 
-  const placeolderColor = theme === 'light' ? darkBaseColor : lightBaseColor;
-  const placeolderHighlight =
+  const placeholderColor = theme === 'light' ? darkBaseColor : lightBaseColor;
+  const placeholderHighlight =
     theme === 'light' ? darkHighlightColor : lightHighlightColor;
 
   const backgroundColor = theme === 'light' ? 'white' : '#333';
@@ -64,8 +64,8 @@ export const LightAndDarkThemes: React.FC = () => {
       </button>
       <SideBySide>
         <PlaceholderTheme
-          baseColor={placeolderColor}
-          highlightColor={placeolderHighlight}
+          baseColor={placeholderColor}
+          highlightColor={placeholderHighlight}
         >
           <Placeholder count={5} wrapper={Box} />
         </PlaceholderTheme>
@@ -85,10 +85,10 @@ export const PropsExplicitlySetToUndefined: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-placeolder/issues/128">
+      <a href="https://github.com/dvtng/react-loading-placeholder/issues/128">
         #128
       </a>
-      . The placeolder should have Christmas colors.
+      . The placeholder should have Christmas colors.
     </p>
     <PlaceholderTheme baseColor="green" highlightColor="red">
       <Placeholder baseColor={undefined} highlightColor={undefined} />

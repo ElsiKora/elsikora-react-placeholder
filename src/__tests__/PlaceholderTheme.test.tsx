@@ -18,16 +18,16 @@ it('does not render anything', () => {
   expect(screen.getByTestId('container')).toBeEmptyDOMElement();
 });
 
-it('styles the placeolder', () => {
+it('styles the placeholder', () => {
   render(
     <PlaceholderTheme borderRadius="1rem" baseColor="black">
       <Placeholder />
     </PlaceholderTheme>
   );
 
-  const placeolder = getPlaceholder();
-  expect(placeolder).toHaveStyle({ borderRadius: '1rem' });
-  expect(placeolder.style.getPropertyValue('--base-color')).toBe('black');
+  const placeholder = getPlaceholder();
+  expect(placeholder).toHaveStyle({ borderRadius: '1rem' });
+  expect(placeholder.style.getPropertyValue('--base-color')).toBe('black');
 });
 
 it('is overridden by Placeholder props', () => {
@@ -37,12 +37,12 @@ it('is overridden by Placeholder props', () => {
     </PlaceholderTheme>
   );
 
-  const placeolder = getPlaceholder();
-  expect(placeolder).toHaveStyle({ borderRadius: '2rem' });
-  expect(placeolder.style.getPropertyValue('--base-color')).toBe('black');
+  const placeholder = getPlaceholder();
+  expect(placeholder).toHaveStyle({ borderRadius: '2rem' });
+  expect(placeholder.style.getPropertyValue('--base-color')).toBe('black');
 });
 
-it('styles the placeolder through a portal', () => {
+it('styles the placeholder through a portal', () => {
   const portalDestination = document.createElement('div');
   document.body.append(portalDestination);
 
@@ -52,9 +52,9 @@ it('styles the placeolder through a portal', () => {
     </PlaceholderTheme>
   );
 
-  const placeolder = getPlaceholder();
-  expect(placeolder).toHaveStyle({ borderRadius: '1rem' });
-  expect(placeolder.style.getPropertyValue('--base-color')).toBe('black');
+  const placeholder = getPlaceholder();
+  expect(placeholder).toHaveStyle({ borderRadius: '1rem' });
+  expect(placeholder.style.getPropertyValue('--base-color')).toBe('black');
 });
 
 // Regression test
@@ -65,7 +65,7 @@ it('is not blocked by setting Placeholder props to undefined', () => {
     </PlaceholderTheme>
   );
 
-  const placeolder = getPlaceholder();
-  expect(placeolder.style.getPropertyValue('--base-color')).toBe('green');
-  expect(placeolder.style.getPropertyValue('--highlight-color')).toBe('red');
+  const placeholder = getPlaceholder();
+  expect(placeholder.style.getPropertyValue('--base-color')).toBe('green');
+  expect(placeholder.style.getPropertyValue('--highlight-color')).toBe('red');
 });

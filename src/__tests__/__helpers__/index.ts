@@ -4,17 +4,17 @@ import { expect } from 'vitest';
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-explicit-any
 expect.extend(matchers as any);
 
-export const placeolderSelector = 'span.react-loading-placeolder';
+export const placeholderSelector = 'span.react-loading-placeholder';
 
 export function getAllPlaceholders(): HTMLElement[] {
-  return Array.from(document.querySelectorAll<HTMLElement>(placeolderSelector));
+  return Array.from(document.querySelectorAll<HTMLElement>(placeholderSelector));
 }
 
 export function getPlaceholder(): HTMLElement {
-  const placeolder = document.querySelector<HTMLElement>(placeolderSelector);
-  if (!placeolder) throw new Error('Could not find placeolder.');
+  const placeholder = document.querySelector<HTMLElement>(placeholderSelector);
+  if (!placeholder) throw new Error('Could not find placeholder.');
 
-  return placeolder;
+  return placeholder;
 }
 
 export function hasLineBreak(): boolean {

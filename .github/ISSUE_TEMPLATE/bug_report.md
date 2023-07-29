@@ -20,7 +20,7 @@ A clear and concise description of what you expected to happen.
 
 **Versions**
 
-- react-loading-placeolder version:
+- react-loading-placeholder version:
 - Browser version:
 
 **Additional context**

@@ -11,8 +11,8 @@ it('exports Placeholder and friends', () => {
   expect(typeof PlaceholderTheme).toBe('function');
 
   /* eslint-disable @typescript-eslint/no-unused-vars */
-  const placeolderProps: PlaceholderProps = { count: 3, borderRadius: '1rem' };
-  const placeolderThemeProps: PlaceholderThemeProps = {
+  const placeholderProps: PlaceholderProps = { count: 3, borderRadius: '1rem' };
+  const placeholderThemeProps: PlaceholderThemeProps = {
     children: <div />,
     baseColor: '#3a3a3a',
     highlightColor: 'white',

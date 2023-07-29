@@ -1,38 +1,38 @@
 <div align="center">
-    <a href="https://github.com/dvtng/react-loading-placeolder">
+    <a href="https://github.com/dvtng/react-loading-placeholder">
         <img src="assets/logo.svg" alt="Logo" width="80" height="80" />
     </a>
     <h1 align="center">Elsikora React Placeholder</h1>
     <p align="center">
-        Make beautiful, animated loading placeolders that automatically adapt to your app.
+        Make beautiful, animated loading placeholders that automatically adapt to your app.
     </p>
     <h3>
-    <!--<a href="https://dvtng.github.io/react-loading-placeolder">View Live Demo</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;-->
-    <a href="https://codesandbox.io/s/react-loading-placeolder-3xwil?file=/src/App.tsx">Open on CodeSandbox</a>
+    <!--<a href="https://dvtng.github.io/react-loading-placeholder">View Live Demo</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;-->
+    <a href="https://codesandbox.io/s/react-loading-placeholder-3xwil?file=/src/App.tsx">Open on CodeSandbox</a>
     </h3>
-    <img src="https://media.giphy.com/media/l0Iyk4bAAjac3AU2k/giphy.gif" alt="Gif of the placeolder in action">
+    <img src="https://media.giphy.com/media/l0Iyk4bAAjac3AU2k/giphy.gif" alt="Gif of the placeholder in action">
 </div>
 
 Learn about the [changes in version
-3](https://github.com/dvtng/react-loading-placeolder/releases/tag/v3.0.0), or view
+3](https://github.com/dvtng/react-loading-placeholder/releases/tag/v3.0.0), or view
 the [v2
-documentation](https://github.com/dvtng/react-loading-placeolder/tree/v2#readme).
+documentation](https://github.com/dvtng/react-loading-placeholder/tree/v2#readme).
 
 ## Basic Usage
 
 Install via one of:
 
 ```bash
-yarn add react-loading-placeolder
-npm install react-loading-placeolder
+yarn add react-loading-placeholder
+npm install react-loading-placeholder
 ```
 
 ```tsx
-import Placeholder from 'react-loading-placeolder'
-import 'react-loading-placeolder/dist/placeolder.css'
+import Placeholder from 'react-loading-placeholder'
+import 'react-loading-placeholder/dist/placeholder.css'
 
-<Placeholder /> // Simple, single-line loading placeolder
-<Placeholder count={5} /> // Five-line loading placeolder
+<Placeholder /> // Simple, single-line loading placeholder
+<Placeholder count={5} /> // Five-line loading placeholder
 ```
 
 ## Principles
@@ -41,7 +41,7 @@ import 'react-loading-placeolder/dist/placeolder.css'
 
 The `Placeholder` component should be used directly in your components in place of
 content that is loading. While other libraries require you to meticulously craft
-a placeolder screen that matches the font size, line height, and margins of your
+a placeholder screen that matches the font size, line height, and margins of your
 content, the `Placeholder` component is automatically sized to the correct
 dimensions.
 
@@ -58,15 +58,15 @@ function BlogPost(props) {
 }
 ```
 
-...will produce correctly-sized placeolders for the heading and body without any
+...will produce correctly-sized placeholders for the heading and body without any
 further configuration.
 
 This ensures the loading state remains up-to-date with any changes
 to your layout or typography.
 
-### Don't make dedicated placeolder screens
+### Don't make dedicated placeholder screens
 
-Instead, make components with _built-in_ placeolder states.
+Instead, make components with _built-in_ placeholder states.
 
 This approach is beneficial because:
 
@@ -74,15 +74,15 @@ This approach is beneficial because:
 2. Components should represent all possible states — loading included.
 3. It allows for more flexible loading patterns. In the blog post example above,
    it's possible to have the title load before the body, while having both
-   pieces of content show loading placeolders at the right time.
+   pieces of content show loading placeholders at the right time.
 
 ## Theming
 
-Customize individual placeolders with props, or render a `PlaceholderTheme` to style
-all placeolders below it in the React hierarchy:
+Customize individual placeholders with props, or render a `PlaceholderTheme` to style
+all placeholders below it in the React hierarchy:
 
 ```tsx
-import Placeholder, { PlaceholderTheme } from 'react-loading-placeolder';
+import Placeholder, { PlaceholderTheme } from 'react-loading-placeholder';
 
 return (
   <PlaceholderTheme baseColor="#202020" highlightColor="#444">
@@ -109,9 +109,9 @@ return (
         <tr>
             <td><code>count?: number</code></td>
             <td>
-                The number of lines of placeolders to render. If
+                The number of lines of placeholders to render. If
                 <code>count</code> is a decimal number like 3.5,
-                three full placeolders and one half-width placeolder will be
+                three full placeholders and one half-width placeholder will be
                 rendered.
             </td>
             <td><code>1</code></td>
@@ -119,7 +119,7 @@ return (
         <tr>
             <td><code>wrapper?: React.FunctionComponent <br> &lt;PropsWithChildren&lt;unknown&gt;&gt;</code></td>
             <td>
-                A custom wrapper component that goes around the individual placeolder
+                A custom wrapper component that goes around the individual placeholder
                 elements.
             </td>
             <td></td>
@@ -127,7 +127,7 @@ return (
         <tr>
             <td><code>circle?: boolean</code></td>
             <td>
-                Makes the placeolder circular by setting <code>border-radius</code> to
+                Makes the placeholder circular by setting <code>border-radius</code> to
                 <code>50%</code>.
             </td>
             <td><code>false</code></td>
@@ -135,8 +135,8 @@ return (
         <tr>
             <td><code>className?: string</code></td>
             <td>
-                A custom class name for the individual placeolder elements which is used
-                alongside the default class, <code>react-loading-placeolder</code>.
+                A custom class name for the individual placeholder elements which is used
+                alongside the default class, <code>react-loading-placeholder</code>.
             </td>
             <td></td>
         </tr>
@@ -144,7 +144,7 @@ return (
             <td><code>containerClassName?: string</code></td>
             <td>
                 A custom class name for the <code>&lt;span&gt;</code> that wraps the
-                individual placeolder elements.
+                individual placeholder elements.
             </td>
             <td></td>
         </tr>
@@ -161,7 +161,7 @@ return (
             <td><code>style?: React.CSSProperties</code></td>
             <td>
                 This is an escape hatch for advanced use cases and is not the preferred
-                way to style the placeolder. Props (e.g. <code>width</code>,
+                way to style the placeholder. Props (e.g. <code>width</code>,
                 <code>borderRadius</code>) take priority over this style object.
             </td>
             <td></td>
@@ -182,34 +182,34 @@ return (
     <tbody>
         <tr>
             <td><code>baseColor?: string</code></td>
-            <td>The background color of the placeolder.</td>
+            <td>The background color of the placeholder.</td>
             <td><code>#ebebeb</code></td>
         </tr>
         <tr>
             <td><code>highlightColor?: string</code></td>
-            <td>The highlight color in the placeolder animation.</td>
+            <td>The highlight color in the placeholder animation.</td>
             <td><code>#f5f5f5</code></td>
         </tr>
         <tr>
             <td><code>width?: string | number</code></td>
-            <td>The width of the placeolder.</td>
+            <td>The width of the placeholder.</td>
             <td><code>100%</code></td>
         </tr>
         <tr>
             <td><code>height?: string | number</code></td>
-            <td>The height of each placeolder line.</td>
+            <td>The height of each placeholder line.</td>
             <td>The font size</td>
         </tr>
         <tr>
             <td><code>borderRadius?: string | number</code></td>
-            <td>The border radius of the placeolder.</td>
+            <td>The border radius of the placeholder.</td>
             <td><code>0.25rem</code></td>
         </tr>
         <tr>
             <td><code>inline?: boolean</code></td>
             <td>
-                By default, a <code>&lt;br /&gt;</code> is inserted after each placeolder so
-                that each placeolder gets its own line. When <code>inline</code> is true, no
+                By default, a <code>&lt;br /&gt;</code> is inserted after each placeholder so
+                that each placeholder gets its own line. When <code>inline</code> is true, no
                 line breaks are inserted.
             </td>
             <td><code>false</code></td>
@@ -229,7 +229,7 @@ return (
         <tr>
             <td><code>enableAnimation?: boolean</code></td>
             <td>
-                Whether the animation should play. The placeolder will be a solid color when
+                Whether the animation should play. The placeholder will be a solid color when
                 this is <code>false</code>. You could use this prop to stop the animation
                 if an error occurs.
             </td>
@@ -242,7 +242,7 @@ return (
 
 ### Custom Wrapper
 
-There are two ways to wrap a placeolder in a container:
+There are two ways to wrap a placeholder in a container:
 
 ```tsx
 function Box({ children }: PropsWithChildren<unknown>) {
@@ -275,9 +275,9 @@ const wrapped2 = (
 
 ## Troubleshooting
 
-### The placeolder width is 0 when the parent has `display: flex`!
+### The placeholder width is 0 when the parent has `display: flex`!
 
-In the example below, the width of the placeolder will be 0:
+In the example below, the width of the placeholder will be 0:
 
 ```tsx
 <div style={{ display: 'flex' }}>
@@ -285,8 +285,8 @@ In the example below, the width of the placeolder will be 0:
 </div>
 ```
 
-This happens because the placeolder has no intrinsic width. You can fix it by
-applying `flex: 1` to the placeolder container via the `containerClassName` prop.
+This happens because the placeholder has no intrinsic width. You can fix it by
+applying `flex: 1` to the placeholder container via the `containerClassName` prop.
 
 For example, if you are using Tailwind, your code would look like this:
 
@@ -299,7 +299,7 @@ For example, if you are using Tailwind, your code would look like this:
 ### The height of my container is off by a few pixels!
 
 In the example below, the height of the `<div>` will be slightly larger than 30
-even though the `react-loading-placeolder` element is exactly 30px.
+even though the `react-loading-placeholder` element is exactly 30px.
 
 ```tsx
 <div>
@@ -309,7 +309,7 @@ even though the `react-loading-placeolder` element is exactly 30px.
 
 This is a consequence of how `line-height` works in CSS. If you need the `<div>`
 to be exactly 30px tall, set its `line-height` to 1. [See
-here](https://github.com/dvtng/react-loading-placeolder/issues/23#issuecomment-939231878)
+here](https://github.com/dvtng/react-loading-placeholder/issues/23#issuecomment-939231878)
 for more details.
 
 ## Contributing

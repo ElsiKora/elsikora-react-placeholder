@@ -179,10 +179,10 @@ export const PercentWidthInFlex: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-placeolder/issues/61">
+      <a href="https://github.com/dvtng/react-loading-placeholder/issues/61">
         #61
       </a>
-      . The placeolder should take up 50% of the width of the turquoise flex
+      . The placeholder should take up 50% of the width of the turquoise flex
       container.
     </p>
     <div
@@ -203,10 +203,10 @@ export const FillEntireContainer: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-placeolder/issues/31">
+      <a href="https://github.com/dvtng/react-loading-placeholder/issues/31">
         #31
       </a>
-      . The placeolder should fill the entire red container. The container has{' '}
+      . The placeholder should fill the entire red container. The container has{' '}
       <code>line-height: 1</code> to make it pixel perfect.
     </p>
     <div
@@ -257,7 +257,7 @@ export const HeightQuirk: React.FC = () => (
   <div>
     <p>
       This is a demonstration of a Placeholder quirk that was reported in{' '}
-      <a href="https://github.com/dvtng/react-loading-placeolder/issues/23">
+      <a href="https://github.com/dvtng/react-loading-placeholder/issues/23">
         #23
       </a>
       .
@@ -336,8 +336,8 @@ export const ShadowDOM: React.FC = () => {
 
   // This CSS does NOT need to be updated, the goal is just to prove that
   // Placeholder is capable of working in a Shadow DOM
-  const placeolderCss = `
-    @keyframes react-loading-placeolder {
+  const placeholderCss = `
+    @keyframes react-loading-placeholder {
         0% {
             background-position: -200px 0;
         }
@@ -346,7 +346,7 @@ export const ShadowDOM: React.FC = () => {
         }
     }
 
-    .react-loading-placeolder {
+    .react-loading-placeholder {
         /* If either color is changed, Placeholder.tsx must be updated as well */
         --base-color: #ebebeb;
         --highlight-color: #f5f5f5;
@@ -366,7 +366,7 @@ export const ShadowDOM: React.FC = () => {
         display: inline-block;
         line-height: 1;
 
-        animation-name: react-loading-placeolder;
+        animation-name: react-loading-placeholder;
         animation-duration: 1.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -376,7 +376,7 @@ export const ShadowDOM: React.FC = () => {
   const shadowContent = (
     <>
       <Placeholder />
-      <style>{placeolderCss}</style>
+      <style>{placeholderCss}</style>
     </>
   );
 
@@ -385,7 +385,7 @@ export const ShadowDOM: React.FC = () => {
       <p>
         This story verifies that Placeholder works inside a Shadow DOM. An older
         version of Placeholder did not work inside the Shadow DOM according to{' '}
-        <a href="https://github.com/dvtng/react-loading-placeolder/issues/69">
+        <a href="https://github.com/dvtng/react-loading-placeholder/issues/69">
           #69
         </a>
         .
@@ -401,7 +401,7 @@ export const RegressionTest133 = () => (
   <div>
     <p>
       Regression test for{' '}
-      <a href="https://github.com/dvtng/react-loading-placeolder/pull/133">
+      <a href="https://github.com/dvtng/react-loading-placeholder/pull/133">
         #133
       </a>
       , in which the pseudoelement had the wrong vertical position. The animated
@@ -418,7 +418,7 @@ export const RegressionTest133 = () => (
 
 export const PrefersReducedMotion = () => (
   <div>
-    <p>With prefers-reduced-motion, this placeolder should not be animated.</p>
+    <p>With prefers-reduced-motion, this placeholder should not be animated.</p>
     <Placeholder
       circle
       baseColor="lavender"
