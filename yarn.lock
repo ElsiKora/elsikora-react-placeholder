@@ -10332,9 +10332,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-loading-skeleton@workspace:.":
+"react-loading-placeolder@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-loading-skeleton@workspace:."
+  resolution: "react-loading-placeolder@workspace:."
   dependencies:
     "@rollup/plugin-typescript": ^11.1.0
     "@storybook/addon-essentials": ^7.0.7

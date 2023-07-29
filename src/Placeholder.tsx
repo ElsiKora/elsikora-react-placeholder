@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React, { CSSProperties, PropsWithChildren, ReactElement } from 'react';
-import { SkeletonThemeContext } from './SkeletonThemeContext.js';
-import { SkeletonStyleProps } from './SkeletonStyleProps.js';
+import { PlaceholderThemeContext } from './PlaceholderThemeContext.js';
+import { PlaceholderStyleProps } from './PlaceholderStyleProps.js';
 
 const defaultEnableAnimation = true;
 
@@ -18,7 +18,7 @@ function styleOptionsToCssProperties({
   direction,
   duration,
   enableAnimation = defaultEnableAnimation,
-}: SkeletonStyleProps & { circle: boolean }): CSSProperties {
+}: PlaceholderStyleProps & { circle: boolean }): CSSProperties {
   const style: CSSProperties & Record<`--${string}`, string> = {};
 
   if (direction === 'rtl') style['--animation-direction'] = 'reverse';
@@ -43,7 +43,7 @@ function styleOptionsToCssProperties({
   return style;
 }
 
-export interface SkeletonProps extends SkeletonStyleProps {
+export interface PlaceholderProps extends PlaceholderStyleProps {
   count?: number;
   wrapper?: React.FunctionComponent<PropsWithChildren<unknown>>;
 
@@ -55,7 +55,7 @@ export interface SkeletonProps extends SkeletonStyleProps {
   style?: CSSProperties;
 }
 
-export function Skeleton({
+export function Placeholder({
   count = 1,
   wrapper: Wrapper,
 
@@ -67,8 +67,8 @@ export function Skeleton({
 
   style: styleProp,
   ...originalPropsStyleOptions
-}: SkeletonProps): ReactElement {
-  const contextStyleOptions = React.useContext(SkeletonThemeContext);
+}: PlaceholderProps): ReactElement {
+  const contextStyleOptions = React.useContext(PlaceholderThemeContext);
 
   const propsStyleOptions = { ...originalPropsStyleOptions };
 
@@ -93,7 +93,7 @@ export function Skeleton({
     ...styleOptionsToCssProperties(styleOptions),
   };
 
-  let className = 'react-loading-skeleton';
+  let className = 'react-loading-placeolder';
   if (customClassName) className += ` ${customClassName}`;
 
   const inline = styleOptions.inline ?? false;
@@ -107,10 +107,10 @@ export function Skeleton({
 
     if (countCeil > count && i === countCeil - 1) {
       // count is not an integer and we've reached the last iteration of
-      // the loop, so add a "fractional" skeleton.
+      // the loop, so add a "fractional" placeolder.
       //
       // For example, if count is 3.5, we've already added 3 full
-      // skeletons, so now we add one more skeleton that is 0.5 times the
+      // placeolders, so now we add one more placeolder that is 0.5 times the
       // original width.
 
       const width = thisStyle.width ?? '100%'; // 100% is the default since that's what's in the CSS
@@ -125,20 +125,20 @@ export function Skeleton({
       thisStyle = { ...thisStyle, width: fractionalWidth };
     }
 
-    const skeletonSpan = (
+    const placeolderSpan = (
       <span className={className} style={thisStyle} key={i}>
         &zwnj;
       </span>
     );
 
     if (inline) {
-      elements.push(skeletonSpan);
+      elements.push(placeolderSpan);
     } else {
-      // Without the <br />, the skeleton lines will all run together if
+      // Without the <br />, the placeolder lines will all run together if
       // `width` is specified
       elements.push(
         <React.Fragment key={i}>
-          {skeletonSpan}
+          {placeolderSpan}
           <br />
         </React.Fragment>
       );

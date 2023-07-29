@@ -8,23 +8,23 @@ import React, {
 import ReactDOM from 'react-dom';
 import { Meta } from '@storybook/react';
 import { SideBySide, Box } from './components/index.js';
-import { Skeleton } from '../Skeleton.js';
-import './styles/Skeleton.stories.css';
+import { Placeholder } from '../Placeholder.js';
+import './styles/Placeholder.stories.css';
 
 export default {
-  component: Skeleton,
-  title: 'Skeleton',
+  component: Placeholder,
+  title: 'Placeholder',
 } satisfies Meta;
 
-export const Basic: React.FC = () => <Skeleton count={5} width={400} />;
+export const Basic: React.FC = () => <Placeholder count={5} width={400} />;
 
 export const Inline: React.FC = () => (
   <SideBySide>
     <div>
-      <Skeleton width={100} inline style={{ marginRight: '0.5rem' }} />
-      <Skeleton width={150} inline style={{ marginRight: '0.5rem' }} />
-      <Skeleton width={75} inline style={{ marginRight: '0.5rem' }} />
-      <Skeleton width={150} inline />
+      <Placeholder width={100} inline style={{ marginRight: '0.5rem' }} />
+      <Placeholder width={150} inline style={{ marginRight: '0.5rem' }} />
+      <Placeholder width={75} inline style={{ marginRight: '0.5rem' }} />
+      <Placeholder width={150} inline />
     </div>
     <div>Some text for comparison</div>
   </SideBySide>
@@ -32,13 +32,13 @@ export const Inline: React.FC = () => (
 
 export const InlineWithText: React.FC = () => (
   <div>
-    Some random text <Skeleton width={150} inline /> Some more random text
+    Some random text <Placeholder width={150} inline /> Some more random text
   </div>
 );
 
 export const BlockWrapper: React.FC = () => (
   <SideBySide>
-    <Skeleton count={5} wrapper={Box} />
+    <Placeholder count={5} wrapper={Box} />
     <div>
       <Box>A</Box>
       <Box>B</Box>
@@ -60,7 +60,7 @@ export const InlineWrapper: React.FC = () => (
       <div>
         {[0, 1, 2, 3].map((i) => (
           <div key={i}>
-            <Skeleton
+            <Placeholder
               count={4}
               width={75}
               inline
@@ -81,52 +81,52 @@ export const InlineWrapper: React.FC = () => (
 
 export const DifferentDurations: React.FC = () => (
   <div style={{ width: 500 }}>
-    <Skeleton duration={1} />
-    <Skeleton duration={2} />
-    <Skeleton duration={3} />
-    <Skeleton duration={4} />
+    <Placeholder duration={1} />
+    <Placeholder duration={2} />
+    <Placeholder duration={3} />
+    <Placeholder duration={4} />
   </div>
 );
 
 export const DifferentWidths: React.FC = () => (
   <div style={{ display: 'flex', flexDirection: 'column' }}>
-    <Skeleton />
-    <Skeleton width={50} />
-    <Skeleton width={100} />
-    <Skeleton width={200} />
-    <Skeleton width="50em" />
+    <Placeholder />
+    <Placeholder width={50} />
+    <Placeholder width={100} />
+    <Placeholder width={200} />
+    <Placeholder width="50em" />
   </div>
 );
 
 export const DifferentHeights: React.FC = () => (
   <div style={{ display: 'flex', flexDirection: 'column' }}>
-    <Skeleton />
-    <Skeleton height={200} />
-    <Skeleton height={400} />
-    <Skeleton height={600} />
-    <Skeleton height="50em" />
+    <Placeholder />
+    <Placeholder height={200} />
+    <Placeholder height={400} />
+    <Placeholder height={600} />
+    <Placeholder height="50em" />
   </div>
 );
 
 export const CustomStyles: React.FC = () => (
-  <Skeleton
+  <Placeholder
     height="100px"
     style={{ borderRadius: 10, height: 50, width: 50 }}
   />
 );
 
 export const Circle: React.FC = () => (
-  <Skeleton height={50} width={50} circle />
+  <Placeholder height={50} width={50} circle />
 );
 
-export const DecimalCount: React.FC = () => <Skeleton count={3.5} />;
+export const DecimalCount: React.FC = () => <Placeholder count={3.5} />;
 
 export const DecimalCountPercentWidth: React.FC = () => (
-  <Skeleton width="50%" count={3.5} />
+  <Placeholder width="50%" count={3.5} />
 );
 
 export const DecimalCountInline: React.FC = () => (
-  <Skeleton width={100} inline count={3.5} style={{ marginRight: '1rem' }} />
+  <Placeholder width={100} inline count={3.5} style={{ marginRight: '1rem' }} />
 );
 
 // Use https://bennettfeely.com/clippy/ to try out other shapes
@@ -145,7 +145,7 @@ const StarWrapper: React.FC<PropsWithChildren<unknown>> = ({ children }) => (
 );
 
 export const Stars: React.FC = () => (
-  <Skeleton
+  <Placeholder
     height="100%"
     wrapper={StarWrapper}
     count={5}
@@ -154,7 +154,7 @@ export const Stars: React.FC = () => (
   />
 );
 
-export const RightToLeft: React.FC = () => <Skeleton direction="rtl" />;
+export const RightToLeft: React.FC = () => <Placeholder direction="rtl" />;
 
 export const DisableAnimation: React.FC = () => {
   const [enabled, setEnabled] = useState(true);
@@ -170,7 +170,7 @@ export const DisableAnimation: React.FC = () => {
           onChange={() => setEnabled(!enabled)}
         />
       </label>
-      <Skeleton count={5} enableAnimation={enabled} highlightColor="#FF3384" />
+      <Placeholder count={5} enableAnimation={enabled} highlightColor="#FF3384" />
     </div>
   );
 };
@@ -179,10 +179,10 @@ export const PercentWidthInFlex: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-skeleton/issues/61">
+      <a href="https://github.com/dvtng/react-loading-placeolder/issues/61">
         #61
       </a>
-      . The skeleton should take up 50% of the width of the turquoise flex
+      . The placeolder should take up 50% of the width of the turquoise flex
       container.
     </p>
     <div
@@ -194,7 +194,7 @@ export const PercentWidthInFlex: React.FC = () => (
         height: 50,
       }}
     >
-      <Skeleton containerClassName="w-50" />
+      <Placeholder containerClassName="w-50" />
     </div>
   </div>
 );
@@ -203,10 +203,10 @@ export const FillEntireContainer: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-skeleton/issues/31">
+      <a href="https://github.com/dvtng/react-loading-placeolder/issues/31">
         #31
       </a>
-      . The skeleton should fill the entire red container. The container has{' '}
+      . The placeolder should fill the entire red container. The container has{' '}
       <code>line-height: 1</code> to make it pixel perfect.
     </p>
     <div
@@ -217,7 +217,7 @@ export const FillEntireContainer: React.FC = () => (
         lineHeight: 1,
       }}
     >
-      <Skeleton height="100%" borderRadius={0} />
+      <Placeholder height="100%" borderRadius={0} />
     </div>
   </div>
 );
@@ -256,28 +256,28 @@ function HeightComparison({
 export const HeightQuirk: React.FC = () => (
   <div>
     <p>
-      This is a demonstration of a Skeleton quirk that was reported in{' '}
-      <a href="https://github.com/dvtng/react-loading-skeleton/issues/23">
+      This is a demonstration of a Placeholder quirk that was reported in{' '}
+      <a href="https://github.com/dvtng/react-loading-placeolder/issues/23">
         #23
       </a>
       .
     </p>
     <p>
-      If you set the Skeleton&apos;s height to 30px, the element containing the
-      Skeleton will have a height of 31px, assuming the document&apos;s
+      If you set the Placeholder&apos;s height to 30px, the element containing the
+      Placeholder will have a height of 31px, assuming the document&apos;s
       line-height is left at the default value. The height discrepancy increases
       with line-height.
     </p>
     <p>
       This example uses a large line-height to magnify the issue. It compares a
-      Skeleton with <code>height: 30px</code> to a normal span tag with{' '}
+      Placeholder with <code>height: 30px</code> to a normal span tag with{' '}
       <code>height: 30px; display: inline-block; line-height: 1;</code>. The
       height discrepancy occurs in both cases which suggests that this is not a
-      Skeleton bug.
+      Placeholder bug.
     </p>
     <div style={{ display: 'flex', marginBottom: '3rem' }}>
-      <HeightComparison title="<Skeleton />">
-        <Skeleton height={30} />
+      <HeightComparison title="<Placeholder />">
+        <Placeholder height={30} />
       </HeightComparison>
       <HeightComparison title="<span>">
         <span
@@ -299,15 +299,15 @@ export const HeightQuirk: React.FC = () => (
       Set the <code>line-height</code> of the container to 1.
     </p>
     <HeightComparison title="<div> with line-height: 1" lineHeight={1}>
-      <Skeleton height={30} />
+      <Placeholder height={30} />
     </HeightComparison>
     <h2>Solution 2</h2>
     <p>
       Provide a <code>containerClassName</code> and apply the styles{' '}
       <code>display: block; line-height: 1;</code> to that class.
     </p>
-    <HeightComparison title='<Skeleton containerClassName="..." />'>
-      <Skeleton
+    <HeightComparison title='<Placeholder containerClassName="..." />'>
+      <Placeholder
         height={30}
         containerClassName="height-quirk-custom-container"
       />
@@ -335,9 +335,9 @@ export const ShadowDOM: React.FC = () => {
   // https://github.com/Wildhoney/ReactShadow#getting-started
 
   // This CSS does NOT need to be updated, the goal is just to prove that
-  // Skeleton is capable of working in a Shadow DOM
-  const skeletonCss = `
-    @keyframes react-loading-skeleton {
+  // Placeholder is capable of working in a Shadow DOM
+  const placeolderCss = `
+    @keyframes react-loading-placeolder {
         0% {
             background-position: -200px 0;
         }
@@ -346,8 +346,8 @@ export const ShadowDOM: React.FC = () => {
         }
     }
 
-    .react-loading-skeleton {
-        /* If either color is changed, Skeleton.tsx must be updated as well */
+    .react-loading-placeolder {
+        /* If either color is changed, Placeholder.tsx must be updated as well */
         --base-color: #ebebeb;
         --highlight-color: #f5f5f5;
 
@@ -366,7 +366,7 @@ export const ShadowDOM: React.FC = () => {
         display: inline-block;
         line-height: 1;
 
-        animation-name: react-loading-skeleton;
+        animation-name: react-loading-placeolder;
         animation-duration: 1.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -375,17 +375,17 @@ export const ShadowDOM: React.FC = () => {
 
   const shadowContent = (
     <>
-      <Skeleton />
-      <style>{skeletonCss}</style>
+      <Placeholder />
+      <style>{placeolderCss}</style>
     </>
   );
 
   return (
     <div>
       <p>
-        This story verifies that Skeleton works inside a Shadow DOM. An older
-        version of Skeleton did not work inside the Shadow DOM according to{' '}
-        <a href="https://github.com/dvtng/react-loading-skeleton/issues/69">
+        This story verifies that Placeholder works inside a Shadow DOM. An older
+        version of Placeholder did not work inside the Shadow DOM according to{' '}
+        <a href="https://github.com/dvtng/react-loading-placeolder/issues/69">
           #69
         </a>
         .
@@ -401,14 +401,14 @@ export const RegressionTest133 = () => (
   <div>
     <p>
       Regression test for{' '}
-      <a href="https://github.com/dvtng/react-loading-skeleton/pull/133">
+      <a href="https://github.com/dvtng/react-loading-placeolder/pull/133">
         #133
       </a>
       , in which the pseudoelement had the wrong vertical position. The animated
       highlight should cover the entire square.
     </p>
     <div style={{ display: 'flex' }}>
-      <Skeleton
+      <Placeholder
         baseColor="paleturquoise"
         style={{ display: 'block', width: 200, height: 200 }}
       />
@@ -418,8 +418,8 @@ export const RegressionTest133 = () => (
 
 export const PrefersReducedMotion = () => (
   <div>
-    <p>With prefers-reduced-motion, this skeleton should not be animated.</p>
-    <Skeleton
+    <p>With prefers-reduced-motion, this placeolder should not be animated.</p>
+    <Placeholder
       circle
       baseColor="lavender"
       highlightColor="#E0B0FF"

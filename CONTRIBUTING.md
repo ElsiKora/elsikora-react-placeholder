@@ -1,4 +1,4 @@
-# Contributing to react-loading-skeleton
+# Contributing to react-loading-placeolder
 
 Contributions are welcome.
 
@@ -23,6 +23,6 @@ Contributions are welcome.
 
 ## Test Projects Repository
 
-There are some test projects that use `react-loading-skeleton` in the
-[react-loading-skeleton-test-projects](https://github.com/srmagura/react-loading-skeleton-test-projects)
+There are some test projects that use `react-loading-placeolder` in the
+[react-loading-placeolder-test-projects](https://github.com/srmagura/react-loading-placeolder-test-projects)
 repository.

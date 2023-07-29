@@ -1,17 +1,18 @@
 {
-  "name": "react-loading-skeleton",
-  "version": "3.3.1",
-  "description": "Make beautiful, animated loading skeletons that automatically adapt to your app.",
+  "name": "elsikora-react-placeholder",
+  "version": "3.5.0",
+  "description": "Make beautiful, animated loading placeolders that automatically adapt to your app.",
   "keywords": [
     "react",
     "loading",
-    "skeleton",
+    "placeolder",
     "progress",
-    "spinner"
+    "spinner",
+    "placeholder"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvtng/react-loading-skeleton.git"
+    "url": "https://github.com/dvtng/react-loading-placeolder.git"
   },
   "license": "MIT",
   "author": "David Tang",
@@ -25,7 +26,7 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
-    "./dist/skeleton.css": "./dist/skeleton.css"
+    "./dist/placeolder.css": "./dist/placeolder.css"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.js",

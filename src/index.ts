@@ -1,6 +1,6 @@
-import { Skeleton } from './Skeleton.js';
+import { Placeholder } from './Placeholder.js';
 
-export default Skeleton;
-export * from './SkeletonStyleProps.js';
-export * from './SkeletonTheme.js';
-export type { SkeletonProps } from './Skeleton.js';
+export default Placeholder;
+export * from './PlaceholderStyleProps.js';
+export * from './PlaceholderTheme.js';
+export type { PlaceholderProps } from './Placeholder.js';

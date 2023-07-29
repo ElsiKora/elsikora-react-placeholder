@@ -1,5 +1,5 @@
 import './storybook.css';
-import '../src/skeleton.css';
+import '../src/placeolder.css';
 
 import type { Preview } from '@storybook/react';
 

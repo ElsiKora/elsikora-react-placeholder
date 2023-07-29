@@ -60,7 +60,7 @@ export default {
   plugins: [
     typescript({ exclude: ['**/__tests__/**/*', '**/__stories__/**/*'] }),
     copy({
-      targets: [{ src: 'src/skeleton.css', dest: 'dist' }],
+      targets: [{ src: 'src/placeolder.css', dest: 'dist' }],
     }),
   ],
 };

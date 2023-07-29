@@ -1,5 +1,5 @@
 import React, { PropsWithChildren, ReactElement } from 'react';
-import { Skeleton } from '../../Skeleton.js';
+import { Placeholder } from '../../Placeholder.js';
 
 export const postContent =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
@@ -24,8 +24,8 @@ export function Post({
         lineHeight: size === 'small' ? 'normal' : 2,
       }}
     >
-      <h1>{loading ? <Skeleton /> : 'A Title'}</h1>
-      <p>{loading ? <Skeleton count={5} /> : postContent}</p>
+      <h1>{loading ? <Placeholder /> : 'A Title'}</h1>
+      <p>{loading ? <Placeholder count={5} /> : postContent}</p>
     </div>
   );
 }

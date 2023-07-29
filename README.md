@@ -1,48 +1,48 @@
 <div align="center">
-    <a href="https://github.com/dvtng/react-loading-skeleton">
+    <a href="https://github.com/dvtng/react-loading-placeolder">
         <img src="assets/logo.svg" alt="Logo" width="80" height="80" />
     </a>
-    <h1 align="center">React Loading Skeleton</h1>
+    <h1 align="center">Elsikora React Placeholder</h1>
     <p align="center">
-        Make beautiful, animated loading skeletons that automatically adapt to your app.
+        Make beautiful, animated loading placeolders that automatically adapt to your app.
     </p>
     <h3>
-    <!--<a href="https://dvtng.github.io/react-loading-skeleton">View Live Demo</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;-->
-    <a href="https://codesandbox.io/s/react-loading-skeleton-3xwil?file=/src/App.tsx">Open on CodeSandbox</a>
+    <!--<a href="https://dvtng.github.io/react-loading-placeolder">View Live Demo</a> &nbsp;&nbsp;&bull;&nbsp;&nbsp;-->
+    <a href="https://codesandbox.io/s/react-loading-placeolder-3xwil?file=/src/App.tsx">Open on CodeSandbox</a>
     </h3>
-    <img src="https://media.giphy.com/media/l0Iyk4bAAjac3AU2k/giphy.gif" alt="Gif of the skeleton in action">
+    <img src="https://media.giphy.com/media/l0Iyk4bAAjac3AU2k/giphy.gif" alt="Gif of the placeolder in action">
 </div>
 
 Learn about the [changes in version
-3](https://github.com/dvtng/react-loading-skeleton/releases/tag/v3.0.0), or view
+3](https://github.com/dvtng/react-loading-placeolder/releases/tag/v3.0.0), or view
 the [v2
-documentation](https://github.com/dvtng/react-loading-skeleton/tree/v2#readme).
+documentation](https://github.com/dvtng/react-loading-placeolder/tree/v2#readme).
 
 ## Basic Usage
 
 Install via one of:
 
 ```bash
-yarn add react-loading-skeleton
-npm install react-loading-skeleton
+yarn add react-loading-placeolder
+npm install react-loading-placeolder
 ```
 
 ```tsx
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import Placeholder from 'react-loading-placeolder'
+import 'react-loading-placeolder/dist/placeolder.css'
 
-<Skeleton /> // Simple, single-line loading skeleton
-<Skeleton count={5} /> // Five-line loading skeleton
+<Placeholder /> // Simple, single-line loading placeolder
+<Placeholder count={5} /> // Five-line loading placeolder
 ```
 
 ## Principles
 
 ### Adapts to the styles you have defined
 
-The `Skeleton` component should be used directly in your components in place of
+The `Placeholder` component should be used directly in your components in place of
 content that is loading. While other libraries require you to meticulously craft
-a skeleton screen that matches the font size, line height, and margins of your
-content, the `Skeleton` component is automatically sized to the correct
+a placeolder screen that matches the font size, line height, and margins of your
+content, the `Placeholder` component is automatically sized to the correct
 dimensions.
 
 For example:
@@ -51,22 +51,22 @@ For example:
 function BlogPost(props) {
   return (
     <div>
-      <h1>{props.title || <Skeleton />}</h1>
-      {props.body || <Skeleton count={10} />}
+      <h1>{props.title || <Placeholder />}</h1>
+      {props.body || <Placeholder count={10} />}
     </div>
   );
 }
 ```
 
-...will produce correctly-sized skeletons for the heading and body without any
+...will produce correctly-sized placeolders for the heading and body without any
 further configuration.
 
 This ensures the loading state remains up-to-date with any changes
 to your layout or typography.
 
-### Don't make dedicated skeleton screens
+### Don't make dedicated placeolder screens
 
-Instead, make components with _built-in_ skeleton states.
+Instead, make components with _built-in_ placeolder states.
 
 This approach is beneficial because:
 
@@ -74,28 +74,28 @@ This approach is beneficial because:
 2. Components should represent all possible states — loading included.
 3. It allows for more flexible loading patterns. In the blog post example above,
    it's possible to have the title load before the body, while having both
-   pieces of content show loading skeletons at the right time.
+   pieces of content show loading placeolders at the right time.
 
 ## Theming
 
-Customize individual skeletons with props, or render a `SkeletonTheme` to style
-all skeletons below it in the React hierarchy:
+Customize individual placeolders with props, or render a `PlaceholderTheme` to style
+all placeolders below it in the React hierarchy:
 
 ```tsx
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import Placeholder, { PlaceholderTheme } from 'react-loading-placeolder';
 
 return (
-  <SkeletonTheme baseColor="#202020" highlightColor="#444">
+  <PlaceholderTheme baseColor="#202020" highlightColor="#444">
     <p>
-      <Skeleton count={3} />
+      <Placeholder count={3} />
     </p>
-  </SkeletonTheme>
+  </PlaceholderTheme>
 );
 ```
 
 ## Props Reference
 
-### `Skeleton` only
+### `Placeholder` only
 
 <table>
     <thead>
@@ -109,9 +109,9 @@ return (
         <tr>
             <td><code>count?: number</code></td>
             <td>
-                The number of lines of skeletons to render. If
+                The number of lines of placeolders to render. If
                 <code>count</code> is a decimal number like 3.5,
-                three full skeletons and one half-width skeleton will be
+                three full placeolders and one half-width placeolder will be
                 rendered.
             </td>
             <td><code>1</code></td>
@@ -119,7 +119,7 @@ return (
         <tr>
             <td><code>wrapper?: React.FunctionComponent <br> &lt;PropsWithChildren&lt;unknown&gt;&gt;</code></td>
             <td>
-                A custom wrapper component that goes around the individual skeleton
+                A custom wrapper component that goes around the individual placeolder
                 elements.
             </td>
             <td></td>
@@ -127,7 +127,7 @@ return (
         <tr>
             <td><code>circle?: boolean</code></td>
             <td>
-                Makes the skeleton circular by setting <code>border-radius</code> to
+                Makes the placeolder circular by setting <code>border-radius</code> to
                 <code>50%</code>.
             </td>
             <td><code>false</code></td>
@@ -135,8 +135,8 @@ return (
         <tr>
             <td><code>className?: string</code></td>
             <td>
-                A custom class name for the individual skeleton elements which is used
-                alongside the default class, <code>react-loading-skeleton</code>.
+                A custom class name for the individual placeolder elements which is used
+                alongside the default class, <code>react-loading-placeolder</code>.
             </td>
             <td></td>
         </tr>
@@ -144,7 +144,7 @@ return (
             <td><code>containerClassName?: string</code></td>
             <td>
                 A custom class name for the <code>&lt;span&gt;</code> that wraps the
-                individual skeleton elements.
+                individual placeolder elements.
             </td>
             <td></td>
         </tr>
@@ -161,7 +161,7 @@ return (
             <td><code>style?: React.CSSProperties</code></td>
             <td>
                 This is an escape hatch for advanced use cases and is not the preferred
-                way to style the skeleton. Props (e.g. <code>width</code>,
+                way to style the placeolder. Props (e.g. <code>width</code>,
                 <code>borderRadius</code>) take priority over this style object.
             </td>
             <td></td>
@@ -169,7 +169,7 @@ return (
     </tbody>
 </table>
 
-### `Skeleton` and `SkeletonTheme`
+### `Placeholder` and `PlaceholderTheme`
 
 <table>
     <thead>
@@ -182,34 +182,34 @@ return (
     <tbody>
         <tr>
             <td><code>baseColor?: string</code></td>
-            <td>The background color of the skeleton.</td>
+            <td>The background color of the placeolder.</td>
             <td><code>#ebebeb</code></td>
         </tr>
         <tr>
             <td><code>highlightColor?: string</code></td>
-            <td>The highlight color in the skeleton animation.</td>
+            <td>The highlight color in the placeolder animation.</td>
             <td><code>#f5f5f5</code></td>
         </tr>
         <tr>
             <td><code>width?: string | number</code></td>
-            <td>The width of the skeleton.</td>
+            <td>The width of the placeolder.</td>
             <td><code>100%</code></td>
         </tr>
         <tr>
             <td><code>height?: string | number</code></td>
-            <td>The height of each skeleton line.</td>
+            <td>The height of each placeolder line.</td>
             <td>The font size</td>
         </tr>
         <tr>
             <td><code>borderRadius?: string | number</code></td>
-            <td>The border radius of the skeleton.</td>
+            <td>The border radius of the placeolder.</td>
             <td><code>0.25rem</code></td>
         </tr>
         <tr>
             <td><code>inline?: boolean</code></td>
             <td>
-                By default, a <code>&lt;br /&gt;</code> is inserted after each skeleton so
-                that each skeleton gets its own line. When <code>inline</code> is true, no
+                By default, a <code>&lt;br /&gt;</code> is inserted after each placeolder so
+                that each placeolder gets its own line. When <code>inline</code> is true, no
                 line breaks are inserted.
             </td>
             <td><code>false</code></td>
@@ -229,7 +229,7 @@ return (
         <tr>
             <td><code>enableAnimation?: boolean</code></td>
             <td>
-                Whether the animation should play. The skeleton will be a solid color when
+                Whether the animation should play. The placeolder will be a solid color when
                 this is <code>false</code>. You could use this prop to stop the animation
                 if an error occurs.
             </td>
@@ -242,7 +242,7 @@ return (
 
 ### Custom Wrapper
 
-There are two ways to wrap a skeleton in a container:
+There are two ways to wrap a placeolder in a container:
 
 ```tsx
 function Box({ children }: PropsWithChildren<unknown>) {
@@ -263,53 +263,53 @@ function Box({ children }: PropsWithChildren<unknown>) {
 }
 
 // Method 1: Use the wrapper prop
-const wrapped1 = <Skeleton wrapper={Box} count={5} />;
+const wrapped1 = <Placeholder wrapper={Box} count={5} />;
 
 // Method 2: Do it "the normal way"
 const wrapped2 = (
   <Box>
-    <Skeleton />
+    <Placeholder />
   </Box>
 );
 ```
 
 ## Troubleshooting
 
-### The skeleton width is 0 when the parent has `display: flex`!
+### The placeolder width is 0 when the parent has `display: flex`!
 
-In the example below, the width of the skeleton will be 0:
+In the example below, the width of the placeolder will be 0:
 
 ```tsx
 <div style={{ display: 'flex' }}>
-  <Skeleton />
+  <Placeholder />
 </div>
 ```
 
-This happens because the skeleton has no intrinsic width. You can fix it by
-applying `flex: 1` to the skeleton container via the `containerClassName` prop.
+This happens because the placeolder has no intrinsic width. You can fix it by
+applying `flex: 1` to the placeolder container via the `containerClassName` prop.
 
 For example, if you are using Tailwind, your code would look like this:
 
 ```tsx
 <div style={{ display: 'flex' }}>
-  <Skeleton containerClassName="flex-1" />
+  <Placeholder containerClassName="flex-1" />
 </div>
 ```
 
 ### The height of my container is off by a few pixels!
 
 In the example below, the height of the `<div>` will be slightly larger than 30
-even though the `react-loading-skeleton` element is exactly 30px.
+even though the `react-loading-placeolder` element is exactly 30px.
 
 ```tsx
 <div>
-  <Skeleton height={30} />
+  <Placeholder height={30} />
 </div>
 ```
 
 This is a consequence of how `line-height` works in CSS. If you need the `<div>`
 to be exactly 30px tall, set its `line-height` to 1. [See
-here](https://github.com/dvtng/react-loading-skeleton/issues/23#issuecomment-939231878)
+here](https://github.com/dvtng/react-loading-placeolder/issues/23#issuecomment-939231878)
 for more details.
 
 ## Contributing

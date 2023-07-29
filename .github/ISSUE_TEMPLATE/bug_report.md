@@ -20,7 +20,7 @@ A clear and concise description of what you expected to happen.
 
 **Versions**
 
-- react-loading-skeleton version:
+- react-loading-placeolder version:
 - Browser version:
 
 **Additional context**

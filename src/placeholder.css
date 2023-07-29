@@ -1,10 +1,10 @@
-@keyframes react-loading-skeleton {
+@keyframes react-loading-placeolder {
   100% {
     transform: translateX(100%);
   }
 }
 
-.react-loading-skeleton {
+.react-loading-placeolder {
   --base-color: #ebebeb;
   --highlight-color: #f5f5f5;
   --animation-duration: 1.5s;
@@ -24,7 +24,7 @@
   z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
 }
 
-.react-loading-skeleton::after {
+.react-loading-placeolder::after {
   content: ' ';
   display: var(--pseudo-element-display);
   position: absolute;
@@ -41,7 +41,7 @@
   );
   transform: translateX(-100%);
 
-  animation-name: react-loading-skeleton;
+  animation-name: react-loading-placeolder;
   animation-direction: var(--animation-direction);
   animation-duration: var(--animation-duration);
   animation-timing-function: ease-in-out;
@@ -49,7 +49,7 @@
 }
 
 @media (prefers-reduced-motion) {
-  .react-loading-skeleton {
+  .react-loading-placeolder {
     --pseudo-element-display: none; /* Disable animation */
   }
 }

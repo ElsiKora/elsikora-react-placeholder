@@ -1,4 +1,4 @@
-export interface SkeletonStyleProps {
+export interface PlaceholderStyleProps {
   baseColor?: string;
   highlightColor?: string;
 

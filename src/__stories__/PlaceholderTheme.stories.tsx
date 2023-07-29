@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import { Post, SideBySide, Box } from './components/index.js';
-import { SkeletonTheme } from '../SkeletonTheme.js';
-import { Skeleton } from '../Skeleton.js';
+import { PlaceholderTheme } from '../PlaceholderTheme.js';
+import { Placeholder } from '../Placeholder.js';
 
 export default {
-  component: SkeletonTheme,
-  title: 'SkeletonTheme',
+  component: PlaceholderTheme,
+  title: 'PlaceholderTheme',
 } satisfies Meta;
 
 const darkBaseColor = '#333';
@@ -18,29 +18,29 @@ const lightHighlightColor = '#A0A0A0';
 
 export const WithColors: React.FC = () => (
   <div>
-    <SkeletonTheme
+    <PlaceholderTheme
       baseColor={blueBaseColor}
       highlightColor={blueHighlightColor}
     >
       <Post loading />
-    </SkeletonTheme>
-    <SkeletonTheme
+    </PlaceholderTheme>
+    <PlaceholderTheme
       baseColor={darkBaseColor}
       highlightColor={darkHighlightColor}
     >
       <Post loading />
-    </SkeletonTheme>
+    </PlaceholderTheme>
   </div>
 );
 
 export const NoBorderRadius: React.FC = () => (
-  <SkeletonTheme
+  <PlaceholderTheme
     baseColor={blueBaseColor}
     highlightColor={blueHighlightColor}
     borderRadius="0"
   >
     <Post loading />
-  </SkeletonTheme>
+  </PlaceholderTheme>
 );
 
 export const LightAndDarkThemes: React.FC = () => {
@@ -50,8 +50,8 @@ export const LightAndDarkThemes: React.FC = () => {
     setTheme((oldTheme) => (oldTheme === 'light' ? 'dark' : 'light'));
   };
 
-  const skeletonColor = theme === 'light' ? darkBaseColor : lightBaseColor;
-  const skeletonHighlight =
+  const placeolderColor = theme === 'light' ? darkBaseColor : lightBaseColor;
+  const placeolderHighlight =
     theme === 'light' ? darkHighlightColor : lightHighlightColor;
 
   const backgroundColor = theme === 'light' ? 'white' : '#333';
@@ -63,12 +63,12 @@ export const LightAndDarkThemes: React.FC = () => {
         Toggle Theme
       </button>
       <SideBySide>
-        <SkeletonTheme
-          baseColor={skeletonColor}
-          highlightColor={skeletonHighlight}
+        <PlaceholderTheme
+          baseColor={placeolderColor}
+          highlightColor={placeolderHighlight}
         >
-          <Skeleton count={5} wrapper={Box} />
-        </SkeletonTheme>
+          <Placeholder count={5} wrapper={Box} />
+        </PlaceholderTheme>
         <div>
           <Box>A</Box>
           <Box>B</Box>
@@ -85,13 +85,13 @@ export const PropsExplicitlySetToUndefined: React.FC = () => (
   <div>
     <p>
       This is a test for{' '}
-      <a href="https://github.com/dvtng/react-loading-skeleton/issues/128">
+      <a href="https://github.com/dvtng/react-loading-placeolder/issues/128">
         #128
       </a>
-      . The skeleton should have Christmas colors.
+      . The placeolder should have Christmas colors.
     </p>
-    <SkeletonTheme baseColor="green" highlightColor="red">
-      <Skeleton baseColor={undefined} highlightColor={undefined} />
-    </SkeletonTheme>
+    <PlaceholderTheme baseColor="green" highlightColor="red">
+      <Placeholder baseColor={undefined} highlightColor={undefined} />
+    </PlaceholderTheme>
   </div>
 );
